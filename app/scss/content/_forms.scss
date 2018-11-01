@@ -1,0 +1,60 @@
+// -- Local Variables Section
+$input-height: 35px !default;
+$input-base-padding: 15px !default;
+$input-flat-padding: 30px !default;
+
+
+// -- Default Styles Section
+.input-group {
+  display: block;
+  position: relative;
+  width: 100%;
+  color: $primary;
+  font-size: 14px;
+  font-weight: 600;
+
+  .form-control {
+    height: $input-height;
+    padding-right: $input-base-padding;
+    padding-left: $input-base-padding;
+    border: {
+      top: 0;
+      right: 0;
+      bottom: 1px solid $black;
+      left: 0;
+      radius: 0;
+    }
+    color: $black;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: none;
+    @include form-placeholder($black);
+  }
+
+  .btn {
+    height: $input-height;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: $input-height;
+  }
+
+  select.form-control {
+    height: $input-height !important;
+    background: {
+      position: center right $input-base-padding;
+      image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAAmVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjHWqVAAAAMnRSTlMABggJDBMaGxwiIyYwMTVCQ0ReYnd9f4uMjY+Qkpqio6WmrLGyv8rO3OLj5vX29/j6+xVAv60AAAHUSURBVHgB7MGBAAAAAMOg+1MfZNUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIODM0AFKQlEUBuFfvYJlaYlgJWpReC2sV2f/i2sX8+bbwcxkvd3tX0a1323Xk4xk00uhbzKGdiyNYwtu+lEi79PQnkvlKbDVX6n8rsI6lMwhqNmlZC6zkG6vJXO9Cel+KJnhLqTld8n8LENqXyXz2YJ6K5nXsB5L5iGwU6mcQpufS+Q8D27RS6MvEv8Bvp8/4O/nD/D9/AF/P3+A7/cf4Pv5A/5+/wF/P3+A7/cf4Pv5A/5+/gDfzx/w9/MH/P38Ab6fP+Dv5w/w/fwBfz9/gO/nD/j7+QP+fv6Av5844O//J4cOBgAAABgIzZ96z4MIoRrw/A2o/gZUfwOqvwHV34Dtb0D1N6D6G1D9Daj+Bjx/A6q/AdXfgOpvQPU3oPobUP0NqP4GVH8Dqr8B1d+A6m9A9Teg+htQ/Q2o/gZUfwOqvwHV34Dqb0D1N6D6G1D9Daj+BlR/A6q/AdXfgOpvQPU3YPv39uDQBmAQCADgBwEDkFahSFA49h+uSUV1/d9dtHU+q0VC5d7nta8SOdU+5hy9BgAAAAAAAAAAAAAAAAAAAAAAAAAA/PYAwXt4VhiwahkAAAAASUVORK5CYII=');
+      repeat: no-repeat;
+      size: 14px;
+    }
+    @include appearance(none);
+  }
+
+  textarea.form-control {
+    min-height: 250px;
+    font-size: 13px;
+    @include form-placeholder($success);
+    &.form-review {
+      border: 1px solid $success;
+    }
+  }
+}

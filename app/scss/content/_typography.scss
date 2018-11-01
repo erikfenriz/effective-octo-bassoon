@@ -1,0 +1,129 @@
+//-- Global Typography Styles
+
+// Local Variables Section
+$font-size-base:               15px !default;
+$line-height-base:             1;
+
+$font-size-lead:               25px !default;
+$font-size-xl:                 20px !default;
+$font-size-lg:                 23px !default;
+$font-size-md:                 18px !default;
+$font-size-sm:                 12px !default;
+$font-size-xs:                 10px !default;
+
+$font-size-h1:                 24px !default;
+$font-size-h2:                 60px !default;
+$font-size-h3:                 38px !default;
+$font-size-h4:                 26px !default;
+$font-size-h5:                 22px !default;
+$font-size-h6:                 10px !default;
+
+$headings-color:               $gray-darker !default;
+
+$link-color:                   $gray-darker !default;
+$link-hover-color:             darker($gray-darker, 12%) !default;
+
+
+// Styles Section
+
+// Body
+body {
+  color: $gray-dark;
+  font: {
+    family: $font-family-body;
+    size: $font-size-base;
+  }
+  line-height: $line-height-base;
+}
+
+html * {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: $headings-color;
+  font: {
+    family: $font-family-headings;
+    weight: normal;
+    style: normal;
+  }
+}
+
+h1, .h1 {
+  font-size: $font-size-h1;
+  line-height: $line-height-base;
+
+  @media #{$tablet-port} {
+    font-size: floor($font-size-h1 * .7);
+  }
+}
+h2, .h2 {
+  font-size: $font-size-h2;
+  line-height: $line-height-base;
+
+  @media #{$tablet-port} {
+    font-size: floor($font-size-h2 * .7);
+  }
+}
+h3, .h3 {
+  font-size: $font-size-h3;
+  line-height: $line-height-base;
+
+  @media #{$tablet-port} {
+    font-size: floor($font-size-h3 * .7);
+  }
+}
+h4, .h4 {
+  font-size: $font-size-h4;
+  line-height: $line-height-base;
+
+  @media #{$tablet-port} {
+    font-size: floor($font-size-h4 * .7);
+  }
+}
+h5, .h5 {
+  font-size: $font-size-h5;
+  line-height: $line-height-base;
+
+  @media #{$tablet-port} {
+    font-size: floor($font-size-h5 * .7);
+  }
+}
+h6, .h6 {
+  font-size: $font-size-h6;
+  line-height: $line-height-base;
+
+  @media #{$tablet-port} {
+    font-size: floor($font-size-h6 * .7);
+  }
+}
+
+// Body text
+p, .p {
+  margin: 0 0 $grid-vertical-step;
+}
+small, .small { font-size: 70%; }
+
+// Text predefined sizes
+.text-lead { font-size: $font-size-lead; }
+.text-xl { font-size: $font-size-xl; }
+.text-lg { font-size: $font-size-lg; }
+.text-md { font-size: $font-size-md; }
+.text-sm { font-size: $font-size-sm; }
+.text-xs { font-size: $font-size-xs; }
+
+// Inline links
+a {
+  transition: .25s;
+  color: $gray-dark;
+  text-decoration: underline;
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+  &:focus { outline: none; }
+}

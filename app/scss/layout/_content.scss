@@ -1,0 +1,141 @@
+// -- Local Variables Section
+
+
+
+// -- Styles Section
+// Basic Style Section
+.page {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 0;
+  .section-title {
+    padding: 0 15px;
+  }
+  .section-description {
+    margin-top: 14px;
+    padding: 0 15px;
+    font-size: 36px;
+    &.section-description-small {
+      margin-top: 22px;
+      font-size: 14px;
+    }
+  }
+}
+.section__content {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+// Section Quiz
+.section-quizz {
+  background: {
+    color: $info;
+    image: url('../img/bg3QuizzSection.jpg');
+    repeat: no-repeat;
+  }
+  &::after {
+    @extend %triangle;
+    border-top-color: $info;
+  }
+}
+.section-quizz__quizz {
+  position: relative;
+  min-height: 380px;
+  padding: 40px;
+  text-align: center;
+  .quizz__title {
+    margin-bottom: 0;
+    color: #295369;
+  }
+  .quizz__time {
+    margin: 0 auto;
+  }
+  .quizz__name {
+    margin-top: 50px;
+    color: $white;
+    font-family: $font-family-body;
+    font-size: 38px;
+    line-height: .9;
+    text-transform: uppercase;
+  }
+  .quizz__btn {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    min-width: 240px;
+    transform: translateX(-50%);
+  }
+  &.section-quizz__quizz--expired {
+    background-color: rgba($accent, .4);
+    .quizz__btn {
+      display: block;
+      position: static;
+      width: 240px;
+      margin: {
+        top: 80px;
+        right: auto;
+        left: auto;
+      }
+      transform: none;
+    }
+  }
+  &.section-quiz__quizz--active {
+    background-color: $white;
+    .quizz__title {
+      color: $accent;
+    }
+    .quizz__time {
+      background-color: $accent;
+    }
+    .quizz__name {
+      color: #00526a;
+    }
+  }
+  &.section-quizz__quizz--soon {
+    background-color: #a4d6e0;
+    .quizz__btn {
+      bottom: -20px;
+      background-color: #00526a;
+    }
+  }
+}
+.quizz__unblock {
+  .icon {
+    color: $warning;
+    font-size: 42px;
+  }
+  .quizz__unblock-text {
+    border: 2px solid $accent;
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      background-color: rgba($accent, .3);
+    }
+    .soc-icon {
+      margin: 10px 0;
+      padding: 10px;
+      border-right: 1px solid $white;
+      .icon {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    p {
+      margin-bottom: 0;
+      margin-left: 20px;
+      padding: 12px 0;
+      font-size: 22px;
+      font-style: italic;
+    }
+  }
+}
+
+// Section Holiday
+.section-holiday {
+  background-color: $warning;
+  &::after {
+    @extend %triangle;
+    border-top-color: $warning;
+  }
+}

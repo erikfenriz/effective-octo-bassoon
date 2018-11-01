@@ -1,0 +1,72 @@
+// -- Local Variables Section
+$pagination-text-color: #70daf2 !default;
+
+
+
+// -- Styles Section
+.site-pagination {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%);
+  list-style: none;
+  z-index: 9;
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 22.5px;
+    width: 1px;
+    height: 100%;
+    background-color: $pagination-text-color;
+    content: '';
+    z-index: -1;
+  }
+  .pagination__item {
+    display: block;
+    margin-bottom: 50px;
+    &:last-child {margin-bottom: 0;}
+  }
+  .pagination__item-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    &.is-active {
+      .pagination__item-text {
+        color: $white;
+      }
+      .pagination__item-number {
+        background-color: $white;
+        color: $accent;
+      }
+    }
+  }
+  .pagination__item-text {
+    transition: all .3s;
+    color: $pagination-text-color;
+    font-size: 18px;
+    font-style: italic;
+  }
+  .pagination__item-number {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    transition: all .3s;
+    border: 1px solid $pagination-text-color;
+    border-radius: 50%;
+    background-color: $accent;
+    color: $white;
+    font-size: 24px;
+    line-height: 45px;
+    text-align: center;
+  }
+  // -- Media Section
+  @media screen and (max-width: 1600px) {
+    display: none;
+  }
+}

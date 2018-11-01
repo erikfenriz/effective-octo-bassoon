@@ -1,0 +1,44 @@
+//-- Scaffolding ( Some Super Global Styles)
+
+// Body Styles
+body {
+  background: {
+    position: center;
+    color: $white;
+    repeat: no-repeat;
+    size: cover;
+  }
+}
+
+// Layout Styles
+.container-fluid {
+  max-width: 1920px;
+  margin: {
+    right: auto;
+    left: auto;
+  }
+  @media #{$desktop} {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+.container {max-width: 1140px;}
+
+// Content Styles
+.site-wrapper {
+  width: 100%;
+}
+.site-overlay {
+  position: fixed;
+  transition: opacity .3s;
+  background-color: rgba($black, .7);
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+  @extend %x-y-stretching;
+  &.is-visible {
+    opacity: 1;
+    z-index: 999;
+    pointer-events: auto;
+  }
+}

@@ -1,0 +1,32 @@
+// -- Local Variables Section
+
+
+
+// -- Styles Section
+.site-footer {
+  .section__content {
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: $gray-lighter;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: $gray;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: $gray-dark;
+    }
+  }
+  .rules {
+    max-height: 800px;
+    overflow-y: auto;
+    .rules__lot {
+      border-bottom: 1px solid $accent;
+      &:last-child {border: 0;}
+    }
+  }
+  .logo {
+    margin-top: 100px;
+  }
+}

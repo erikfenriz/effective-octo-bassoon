@@ -1,0 +1,84 @@
+// -- Local Variables Section
+
+// General
+$button-default-padding-y:        5px    !default;
+$button-default-padding-x:        30px   !default;
+
+// Default Skin
+$button-default-background-color: $black !default;
+$button-default-color:            $white !default;
+
+
+
+// -- Default Styles Section
+.btn {
+  display: inline-block;
+  position: relative;
+  transform: translateZ(0);
+  transition: all .35s;
+  border: 0;
+  outline: none;
+  background: {
+    color: transparent;
+    image: none;
+  }
+  color: $white;
+  font: {
+    family: $font-family-body;
+    weight: 500;
+  }
+  white-space: nowrap;
+  box-shadow: none;
+  cursor: pointer;
+  vertical-align: middle;
+  text: {
+    decoration: none;
+    align: center;
+  }
+  box-sizing: border-box;
+  user-select: none;
+  &:hover {
+    color: $white;
+  }
+
+  // Btn Default
+  &.btn-default {
+    padding: $button-default-padding-y $button-default-padding-x;
+    background-color: $warning;
+    font-size: 28px;
+    font-style: italic;
+    // Gradient Btn
+    &.btn-default-gradient {
+      border: 2px solid $success;
+      background: linear-gradient($gradient-from, $gradient-from, $gradient-to);
+      box-shadow: 5px 5px 8px 0 #006830;
+      &:hover {
+        color: $white;
+        box-shadow: 5px 5px 15px 0 #006830;
+      }
+      &:active {
+        box-shadow: 0 0 0 0 transparent;
+      }
+    }
+    .icon {
+      margin: {
+        right: 5px;
+        left: 5px;
+      }
+      font-size: 16px;
+    }
+  }
+
+  // Btn Border
+  &.btn-border {
+    padding: 8px 15px;
+    border: 1px solid #00526a;
+    color: #00526a;
+    font-size: 24px;
+    text-transform: uppercase;
+    .icon {
+      margin: 0 5px;
+      font-size: 18px;
+    }
+  }
+}

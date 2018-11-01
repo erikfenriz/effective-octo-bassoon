@@ -1,0 +1,60 @@
+// -- Local Variables Section
+
+
+
+// -- Styles Section
+.site-header {
+  position: relative;
+  border-top: 5px solid $white;
+  background: {
+    position: 50% 0;
+    color: $accent;
+    image: url('../img/bgMain.jpg');
+    repeat: no-repeat;
+  }
+  &::after {
+    @extend %triangle;
+    border-top-color: $accent;
+  }
+}
+.header__top-line {
+  border-bottom: $border;
+}
+.header__top-line__main-heading {
+  margin-bottom: 17px;
+  padding-top: 18px;
+}
+.header__content__img {
+  margin-top: 120px;
+}
+.header__content__conditions {
+  margin-top: 150px;
+  padding-bottom: 130px;
+  .condition {
+    padding: 40px;
+    border: 2px solid $border-color;
+    .condition__heading {color: #00526a;}
+    .condition__text {
+      margin-top: 30px;
+      margin-bottom: 0;
+      color: $white;
+      &.text-large {font-size: 23px;}
+    }
+    .btn {margin-top: 35px;}
+  }
+  .condition-separator {
+    color: $white;
+    font-family: $font-family-headings;
+    font-size: 132px;
+  }
+}
+
+
+
+// -- Media Section
+@media #{$tablet-port} {
+  .header__content__conditions {
+    margin-top: 100px;
+    padding-bottom: 50px;
+  }
+}

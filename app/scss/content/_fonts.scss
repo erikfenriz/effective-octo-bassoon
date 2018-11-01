@@ -1,0 +1,12 @@
+//-- Fonts
+
+// Toonish
+@include font-face('Toonish', '../fonts/toonish/toonish');
+
+// AcuminPro Condensed
+@include font-face('AcuminProCond', '../fonts/AcuminProCond-Bold/AcuminProCond-Bold', 400);
+@include font-face('AcuminProCond', '../fonts/AcuminProCond-BoldItalic/AcuminProCond-BoldItalic', 400, italic);
+@include font-face('AcuminProCond', '../fonts/AcuminProCond-Light/AcuminProCond-Light', 200);
+
+
+// @include font-face('Font', '../fonts/glyphicons-halflings-regular/glyphicons-halflings-regular');

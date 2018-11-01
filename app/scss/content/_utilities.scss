@@ -1,0 +1,43 @@
+// -- Colors
+
+// Text
+.text-primary {color: $primary !important;}
+.text-accent  {color: $accent  !important;}
+.text-warning {color: $warning !important;}
+.text-success {color: $success !important;}
+
+// Background
+.bg-white {background-color: $white;}
+.bg-black {background-color: $black;}
+
+.bg-primary {background-color: $primary;}
+.bg-warning {background-color: $warning;}
+.bg-success {background-color: $success;}
+
+
+// -- Borders
+
+// Theme Colors
+.border         {border: 1px solid transparent;}
+.border-primary {border-color: $primary;}
+.border-warning {border-color: $warning;}
+.border-success {border-color: $success;}
+
+// -- Fonts
+.font-body     {font-family: $font-family-body;}
+.font-headings {font-family: $font-family-headings;}
+
+// -- Layout
+.img-responsive {
+  display: block;
+  max-width: 100%;
+}
+.text-bg {
+  display: inline-block;
+  padding: 0 12px;
+  background-color: #295369;
+  color: $white;
+  font-size: 19px;
+  line-height: 27px;
+  vertical-align: middle;
+}

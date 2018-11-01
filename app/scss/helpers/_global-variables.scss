@@ -1,0 +1,43 @@
+//-- Global Variables
+
+// Vertical Step
+$grid-vertical-step:           24px !default;
+
+// Font Family
+$font-family-body:            'AcuminProCond', sans-serif;
+$font-family-headings:        'Toonish', sans-serif;
+
+// Colors
+$white:                        #ffffff;
+$black:                        #000000;
+
+$gray-darker:                  #343b43;
+$gray-dark:                    #404040;
+$gray:                         #6c6c6c;
+$gray-light:                   #e7e7e7;
+$gray-lighter:                 #ededed;
+
+
+$accent:                       #00b4e6;
+$info:                         #007296;
+$success:                      #6ac72a;
+$warning:                      #f70c5b;
+
+// Gradient
+$gradient-from:                #6ac72a;
+$gradient-to:                  #00b63e;
+
+// Borders
+$border-color:                 #70daf2;
+$border:                       1px solid $border-color;
+
+// Shadows
+$basic-box-shadow:             0 22px 36px -12px rgba(0, 0, 0, .2);
+
+//-- Media Breakpoints
+$desktop:   		   'screen and (max-width: 1200px)';
+$tablet-land:      'screen and (max-width: 991px)';
+$tablet-port:    	 'screen and (max-width: 768px)';
+$mobile-land:		 	 'screen and (max-width: 480px)';
+$mobile-port:		 	 'screen and (max-width: 360px)';
+$menu-collapse: 	 $tablet-land;
